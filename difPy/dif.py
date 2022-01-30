@@ -203,7 +203,7 @@ class dif:
     
     def _map_similarity(similarity):
         if similarity == "low":
-            ref = 1000
+            ref = 2000
         # search for exact duplicate images, extremly sensitive, MSE < 0.1
         elif similarity == "high":
             ref = 0.1
