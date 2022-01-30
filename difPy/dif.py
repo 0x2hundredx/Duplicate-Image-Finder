@@ -15,7 +15,7 @@ class dif:
         directory_B (str)....second folder path to search for duplicate/similar images
         similarity (str)....."normal" = searches for duplicates, recommended setting, MSE < 200
                              "high" = serached for exact duplicates, extremly sensitive to details, MSE < 0.1
-                             "low" = searches for similar images, MSE < 1000
+                             "low" = searches for similar images, MSE < 3000
         px_size (int)........recommended not to change default value
                              resize images to px_size height x width (in pixels) before being compared
                              the higher the pixel size, the more computational ressources and time required 
@@ -203,7 +203,7 @@ class dif:
     
     def _map_similarity(similarity):
         if similarity == "low":
-            ref = 2000
+            ref = 3000
         # search for exact duplicate images, extremly sensitive, MSE < 0.1
         elif similarity == "high":
             ref = 0.1
